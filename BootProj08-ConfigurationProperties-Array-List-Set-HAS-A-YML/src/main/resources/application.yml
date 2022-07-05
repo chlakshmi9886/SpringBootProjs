@@ -1,0 +1,21 @@
+
+org: 
+ nit: 
+  empNo: 101
+  empName: Sajesh
+  favColors: red, green,brown
+  nickNames: [bunny, chinny, ramya]
+  nick-names: 
+   -Raja
+   -Krishna
+   -Seshu
+  phoneNumbers: 98898,99999,555555,22222
+  idDetails: 
+   aadharId: AADHR8787
+   voterId: SADES658965
+   panNo: XYZABC8795A
+  company: 
+   cmpId: 6589
+   cmpName: HCL
+   cmpAddrs: Bangalore
+   cmpSize: 19099
