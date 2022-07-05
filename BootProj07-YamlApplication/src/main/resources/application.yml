@@ -1,0 +1,7 @@
+
+com: 
+ nt: 
+  custNo: 101
+  custName: "Raja"
+  custAddr: "Hyderabad"
+  billAmt: 100.2
