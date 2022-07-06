@@ -1,0 +1,18 @@
+server:
+  port: 4041
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: venkaT@()5179
+    type: org.apache.commons.dbcp2.BasicDataSource
+    url: jdbc:mysql://localhost:3306/venkatdb
+    username: root
+  datasourece:
+    dbcp2:
+      max-total: 100
+      max-wait-millis: 60000
+      min-idle: 10
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

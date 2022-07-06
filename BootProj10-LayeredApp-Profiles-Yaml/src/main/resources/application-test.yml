@@ -1,0 +1,15 @@
+c3p0:
+  maxsize: 100
+  minsize: 10
+server:
+  port: 4041
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: venkaT@()5179
+    url: jdbc:mysql://localhost:3306/venkatdb
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

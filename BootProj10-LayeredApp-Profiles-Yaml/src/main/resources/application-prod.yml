@@ -1,0 +1,16 @@
+server:
+  port: 4041
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 100
+      minimum-idle: 10
+    password: manager
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
