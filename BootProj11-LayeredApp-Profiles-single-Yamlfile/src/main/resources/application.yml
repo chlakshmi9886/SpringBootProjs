@@ -1,0 +1,78 @@
+spring:
+  profiles:
+    active: dev
+---
+
+server:
+  port: 4041
+spring: 
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: venkaT@()5179
+    type: org.apache.commons.dbcp2.BasicDataSource
+    url: jdbc:mysql://localhost:3306/venkatdb
+    username: root
+  datasourece:
+    dbcp2:
+      max-total: 100
+      max-wait-millis: 60000
+      min-idle: 10
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+---
+
+
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 100
+      minimum-idle: 10
+    password: manager
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+---
+c3p0:
+  maxsize: 100
+  minsize: 10
+server:
+  port: 4041
+spring:
+  profiles: test
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: venkaT@()5179
+    url: jdbc:mysql://localhost:3306/venkatdb
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+---
+
+spring:
+  profiles: uat
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    oracleucp:
+      connection-wait-timeout: 60000
+      initial-pool-size: 10
+      max-pool-size: 100
+    password: manager
+    type: oracle.ucp.jdbc.PoolDataSourceImpl
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
