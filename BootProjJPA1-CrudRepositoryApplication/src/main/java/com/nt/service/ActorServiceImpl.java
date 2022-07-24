@@ -57,6 +57,23 @@ public class ActorServiceImpl implements IActorService {
 		return opt;
 	}
 
+	@Override
+	public Actor showActorById(int id) {
+		/*Optional<Actor> opt = actorRepo.findById(id);
+		if(opt.isPresent()) {
+			return opt.get();
+		}
+		else {
+		throw new IllegalArgumentException("Actor not Found");
+		}
+		*/
+		//Optional<Actor> opt1= actorRepo.findById(id);
+		//return opt1.orElseThrow(()->new IllegalArgumentException("Actor Not Found"));
+		
+		return actorRepo.findById(id).orElseThrow(()-> new IllegalArgumentException("Actor Not Found"));
+		
+	}
+
 	/*
 	@Override
 	public String registerActorsGroup(List<Actor> actorsList) {

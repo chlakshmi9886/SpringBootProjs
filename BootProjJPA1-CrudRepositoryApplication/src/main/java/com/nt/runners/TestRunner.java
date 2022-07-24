@@ -127,6 +127,8 @@ public class TestRunner implements CommandLineRunner {
 			System.out.println("Actor act1:: " +act1);
 			
 			
+			System.out.println("-------------find by id returning directly ------");
+			System.out.println(" actor information :: " + service.showActorById(41));
 			
 		}
 		catch(Exception ex)
