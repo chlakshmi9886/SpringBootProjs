@@ -130,6 +130,25 @@ public class TestRunner implements CommandLineRunner {
 			System.out.println("-------------find by id returning directly ------");
 			System.out.println(" actor information :: " + service.showActorById(41));
 			
+			System.out.println("-------------update actor mobile number ------");
+			System.out.println(" actor information :: " + service.updateActorMobileNo(41, 555555555L));
+			
+			System.out.println("-------------update actor full update operation ------");
+			System.out.println(" actor information :: " + service.updateActor(new Actor(41,"Mohan Babu","Collection King",1111111111L)));
+			
+			System.out.println("---save or update object operation------------");
+			Actor actor = new Actor(42,"Rajendra Prasad", "Commedian",4444444444444L);
+			System.out.println(service.registerOrUpdateActor(actor));
+			
+			Actor actor2 = new Actor(81,"Arjun", "Hero",7777744444444L);
+			System.out.println(service.registerOrUpdateActor(actor2));
+			
+			System.out.println("---delete object operation-by id-----------");
+			System.out.println(service.removeActorById(81));
+			
+			System.out.println("---delete object operation-by actor object-----------");
+			System.out.println(service.removeActorById(new Actor(81,null,null,null)));
+			
 		}
 		catch(Exception ex)
 		{
