@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @Data
 @Table(name="DATA_JPA_ACTOR")
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 public class Actor {
@@ -26,13 +26,13 @@ public class Actor {
 	@Column(name="ACTOR_ID")
 	private Integer Aid;
 	@Column(name="ACTOR_NAME", length = 20)
-	@NonNull
+	//@NonNull
 	private String ActName;
 	@Column(name="CATEGORY",length = 20)
-	@NonNull
+	//@NonNull
 	private String category;
 	@Column(name="MOBILE_NO")
-	@NonNull
+	//@NonNull
 	private Long mobileNo;
 	
 }
