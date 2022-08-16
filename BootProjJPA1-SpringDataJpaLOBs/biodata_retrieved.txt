@@ -1,0 +1,14 @@
+step1: login with SYS/SYSTEM/PDBADMIN user with password.
+step2: create user (nothing but schem) using the following command.
+
+	SQL> create user c##user name
+	identified by password; then enter
+
+USER will create nothing but new schema will create.
+
+		SQL> create user c##venkat
+  			2  identified by manager;
+
+		User created.
+
+step3:
