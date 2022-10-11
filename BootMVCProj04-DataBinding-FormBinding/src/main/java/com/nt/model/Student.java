@@ -12,5 +12,5 @@ public class Student {
 	private String sno;
 	private String sname;
 	private String saddr;
-	private Integer age;
+	private Integer average;
 }
